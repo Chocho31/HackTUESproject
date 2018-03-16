@@ -60,7 +60,7 @@ public class Shooting : MonoBehaviour
 
     {
         Vector2 shootingPosition = new Vector2(firePoint.position.x, firePoint.position.y);
-        GameObject obj = Instantiate(bullet, shootingPosition, transform.rotation);
+        GameObject obj = Instantiate(bullet, shootingPosition,Quaternion.identity);
         obj.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * scale, velocity.y);
         Destroy(obj, 2.5f);
 

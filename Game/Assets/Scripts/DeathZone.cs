@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour {
 
-	void Update ()
+    public Transform WhereToSpawn;
+
+    void Update ()
     {
 		
         if(transform.position.y<0)
         {
 
-            LiveManager.killPlayer(gameObject);
+            Respawn();
 
         }
 
 	}
+
+    void Respawn()
+    {
+        gameObject.transform.position = WhereToSpawn.position;
+    }
 }

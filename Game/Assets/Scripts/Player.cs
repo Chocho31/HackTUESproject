@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
 
         horizontal = Input.GetAxis("Horizontal");
         GetComponent<Animator>().SetFloat("speed",Mathf.Abs( horizontal));
-
+        myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
        
 
         if(horizontal<0 && isRight)
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
 
         }
 
-        myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
+        
 
     }
 

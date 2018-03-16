@@ -10,6 +10,8 @@ public class LiveManager : MonoBehaviour {
 
     public Transform WhereToSpawn;
 
+    
+
 	void Start ()
     {
 
@@ -22,20 +24,23 @@ public class LiveManager : MonoBehaviour {
 		
 	}
 	
-    public void Respawn()
+    public void Respawn(GameObject player)
     {
 
-        Instantiate(PlayerPrefabs, WhereToSpawn.position, WhereToSpawn.rotation);
+        //Instantiate(PlayerPrefabs, WhereToSpawn.position, WhereToSpawn.rotation);
+        player.transform.position = WhereToSpawn.position;
+
+
        
     }
 
     public static void killPlayer(GameObject player)
     {
 
-        Destroy(player);
+       // Destroy(player);
 
-        LM.Respawn();
+        LM.Respawn(player);
 
     }
-
+    
 }
