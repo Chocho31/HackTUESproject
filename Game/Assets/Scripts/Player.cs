@@ -17,27 +17,24 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D myRigidbody;
 
-    private bool isRight;
+    private bool isRight = true;
 
     private Vector2 scale;
 
-    private bool isGrounded;
+    public bool isGrounded = true;
+
 
 
     // Use this for initialization
     void Start ()
     {
 
-        isGrounded = true;
-
-        isRight = true;
-
         myRigidbody = GetComponent<Rigidbody2D>();
 		
 	}
 	
 	// Update is called once per frame
-	void Update()
+	void FixedUpdate()
     { 
 
         HandleMovement();
@@ -47,13 +44,9 @@ public class Player : MonoBehaviour
     void HandleMovement()
     {
 
-        Jump = Input.GetAxis("Jump");
-
         horizontal = Input.GetAxis("Horizontal");
 
-        myRigidbody.velocity = new Vector2(transform.position.x, Jump * jumpForce);
-
-        myRigidbody.velocity = new Vector2(horizontal * movementSpeed, transform.position.y);
+       
 
         if(horizontal<0 && isRight)
         {
@@ -67,6 +60,15 @@ public class Player : MonoBehaviour
             Flip();
 
         }
+
+        if(isGrounded && Input.GetButtonDown("Jump"))
+        {
+
+            Jumping();
+
+        }
+
+        myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
 
     }
 
@@ -83,5 +85,26 @@ public class Player : MonoBehaviour
 
     }
 
-  
+
+    void Jumping()
+    {
+
+        isGrounded = false;
+
+        myRigidbody.AddForce(Vector2.up * jumpForce);
+
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if(collision.gameObject.tag == "Ground")
+        {
+
+            isGrounded = true;
+
+        }
+
+    }
 }
