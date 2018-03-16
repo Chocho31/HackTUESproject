@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
     {
 
         horizontal = Input.GetAxis("Horizontal");
+        GetComponent<Animator>().SetFloat("speed",Mathf.Abs( horizontal));
 
        
 
@@ -92,6 +93,7 @@ public class Player : MonoBehaviour
         isGrounded = false;
 
         myRigidbody.AddForce(Vector2.up * jumpForce);
+        GetComponent<Animator>().SetBool("grounded", isGrounded);
 
 
     }
@@ -103,7 +105,7 @@ public class Player : MonoBehaviour
         {
 
             isGrounded = true;
-
+            GetComponent<Animator>().SetBool("grounded", isGrounded);
         }
 
     }
