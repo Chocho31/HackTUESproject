@@ -28,4 +28,9 @@ public class LevelMenu : MonoBehaviour {
 		Debug.Log ("Level 5");
 		SceneManager.LoadScene (5);
 	}
+	public void Quit()
+	{
+		Application.Quit ();
+		Debug.Log ("Quit");
+	}
 }
