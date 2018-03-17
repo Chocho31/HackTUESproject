@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PopUpScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\DMGScript.cs">
     <Files>
-      <File FileName="Assets\PopUpScript.cs" Line="12" Column="27" />
+      <File FileName="Assets\DMGScript.cs" Line="14" Column="1" />
+      <File FileName="Assets\DoubleBullet.cs" Line="15" Column="1" />
+      <File FileName="Assets\HealthScript.cs" Line="13" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
