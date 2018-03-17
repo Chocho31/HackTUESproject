@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
 
 
-    // Use this for initialization
+
     void Start ()
     {
 
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 		
 	}
 	
-	// Update is called once per frame
+
 	void FixedUpdate()
     { 
 
@@ -45,7 +45,8 @@ public class Player : MonoBehaviour
     {
 
         horizontal = Input.GetAxis("Horizontal");
-
+        GetComponent<Animator>().SetFloat("speed",Mathf.Abs( horizontal));
+        myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
        
 
         if(horizontal<0 && isRight)
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour
 
         }
 
-        myRigidbody.velocity = new Vector2(horizontal * movementSpeed, myRigidbody.velocity.y);
+        
 
     }
 
@@ -92,6 +93,7 @@ public class Player : MonoBehaviour
         isGrounded = false;
 
         myRigidbody.AddForce(Vector2.up * jumpForce);
+        GetComponent<Animator>().SetBool("grounded", isGrounded);
 
 
     }
@@ -103,7 +105,7 @@ public class Player : MonoBehaviour
         {
 
             isGrounded = true;
-
+            GetComponent<Animator>().SetBool("grounded", isGrounded);
         }
 
     }
