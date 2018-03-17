@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    public Transform WhereToSpawn;
+
+    void Update ()
     {
 		
         if(transform.position.y<0)
         {
 
-            LiveManager.killPlayer(gameObject);
+            Respawn();
 
         }
 
 	}
+
+    void Respawn()
+    {
+        gameObject.transform.position = WhereToSpawn.position;
+    }
 }
