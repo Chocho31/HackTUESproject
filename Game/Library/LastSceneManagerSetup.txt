@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scene.unity
+- path: C:/Users/Chocho/Desktop/HackTUESproject/LevelMenu/Assets/Scenes/LevelMenu.unity
   isLoaded: 1
   isActive: 1
