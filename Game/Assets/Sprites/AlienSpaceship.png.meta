@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 784b8d50ad6a122428a170f40b28a50e
-timeCreated: 1521212180
+guid: 061e4c330d5491348bf404f78331b6e6
+timeCreated: 1521273683
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: blast_0
+    21300000: AlienSpaceship_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,8 +46,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 26, y: 33, z: 32, w: 27}
-  spritePixelsToUnits: 30
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -81,35 +81,21 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: blast_0
+      name: AlienSpaceship_0
       rect:
         serializedVersion: 2
-        x: 26
-        y: 33
-        width: 6
-        height: 4
+        x: 0
+        y: 48
+        width: 23
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
-    outline:
-    - - {x: -6, y: 7}
-      - {x: -8, y: 6}
-      - {x: -8, y: 2}
-      - {x: -5, y: -1}
-      - {x: 1, y: -1}
-      - {x: 2, y: 2}
-      - {x: 2, y: 7}
-    physicsShape:
-    - - {x: -6, y: 7}
-      - {x: -8, y: 6}
-      - {x: -8, y: 2}
-      - {x: -5, y: -1}
-      - {x: 1, y: -1}
-      - {x: 2, y: 2}
-      - {x: 2, y: 7}
+    outline: []
+    physicsShape: []
   spritePackingTag: 
   userData: 
   assetBundleName: 
