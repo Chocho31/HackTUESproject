@@ -42,5 +42,7 @@ public class LiveManager : MonoBehaviour {
         LM.Respawn(player);
 
     }
+
+    
     
 }

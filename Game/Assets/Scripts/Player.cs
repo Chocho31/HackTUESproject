@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
 
     public bool isGrounded = true;
 
+  
 
 
 
@@ -107,6 +108,7 @@ public class Player : MonoBehaviour
             isGrounded = true;
             GetComponent<Animator>().SetBool("grounded", isGrounded);
         }
+
 
     }
 }

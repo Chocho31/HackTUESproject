@@ -7,7 +7,7 @@ public class Shooting : MonoBehaviour
 
     [SerializeField] float firerate;
 
-    public int damage = 43;
+    public int damage;
 
 
 
@@ -16,7 +16,7 @@ public class Shooting : MonoBehaviour
     private Transform instance;
     public float scale;
 
-    Vector2 offset = new Vector2(0, 0);
+ 
     public GameObject bullet;
     [SerializeField] Vector2 velocity;
 
@@ -60,8 +60,11 @@ public class Shooting : MonoBehaviour
 
     {
         Vector2 shootingPosition = new Vector2(firePoint.position.x, firePoint.position.y);
+
         GameObject obj = Instantiate(bullet, shootingPosition,Quaternion.identity);
+
         obj.GetComponent<Rigidbody2D>().velocity = new Vector2(velocity.x * scale, velocity.y);
+
         Destroy(obj, 2.5f);
 
     }

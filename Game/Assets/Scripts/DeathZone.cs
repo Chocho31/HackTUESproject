@@ -3,23 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathZone : MonoBehaviour {
+    //kills the player if he falls beyound certain level
 
-    public Transform WhereToSpawn;
+    GameObject player;
+    Health playerHealth;
+
+
+
+
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<Health>();
+    }
 
     void Update ()
     {
 		
-        if(transform.position.y<0)
+        if(transform.position.y<-3)
         {
 
-            Respawn();
+           playerHealth.Respawn();
 
         }
 
 	}
 
-    void Respawn()
-    {
-        gameObject.transform.position = WhereToSpawn.position;
-    }
+    
 }
