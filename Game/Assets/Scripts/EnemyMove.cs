@@ -11,6 +11,9 @@ public class EnemyMove : MonoBehaviour {
 
     void Awake()
     {
+        //spawning at one place
+        // fix not to get the boundaries as childs
+        
         leftBound = GameObject.Find("moveBoundLeft").transform.position;
         rightBound = GameObject.Find("moveBoundRight").transform.position;
         transform.position = rightBound;

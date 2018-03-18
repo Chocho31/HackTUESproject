@@ -20,7 +20,7 @@ public class DeathZone : MonoBehaviour {
     void Update ()
     {
 		
-        if(transform.position.y<-3)
+        if(transform.position.y<-6)
         {
 
            playerHealth.Respawn();

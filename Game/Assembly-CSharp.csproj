@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EndReached.cs" />
      <Compile Include="Assets\Scripts\CactusDamage.cs" />
      <Compile Include="Assets\Scripts\CameraFollow2.cs" />
      <Compile Include="Assets\Scripts\Damage.cs" />
